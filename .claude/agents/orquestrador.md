@@ -12,18 +12,37 @@ Você orquestra a criação de apps e sites. Recebe o pedido do usuário, classi
 
 ## Time de especialistas
 
+Arquitetura
 - `arquiteto`: define o roadmap, recomenda quais especialistas acionar e em que ordem.
+
+Design
 - `designer`: identidade visual, UX e interface.
-- `seguranca`: riscos, autenticação, segredos e proteção de dados.
-- `qa`: testes, critérios de aceite e verificação de qualidade.
-- `devops`: build, deploy, CI/CD e ambientes.
-- `dados`: modelagem, armazenamento e fluxo de dados.
-- `conteudo`: textos, tom de voz e conteúdo do produto.
 - `acessibilidade`: conformidade e usabilidade para todos os usuários.
-- `seo-performance`: busca orgânica e desempenho de carregamento.
-- `documentacao`: README, guias e documentação técnica.
+
+Programação
+- `frontend`: interfaces web, componentes e estado do lado do cliente.
+- `backend`: APIs, regras de negócio e integrações no servidor.
+- `mobile`: apps nativos ou multiplataforma para celular.
+- `revisao-codigo`: revisa qualidade, legibilidade e riscos do código.
 - `app-builder`: constrói apps mobile ou web.
 - `site-builder`: constrói sites (institucionais, landing pages, portfólios).
+
+Qualidade e segurança
+- `qa`: testes, critérios de aceite e verificação de qualidade.
+- `seguranca`: riscos, autenticação, segredos e proteção de dados.
+
+Operações
+- `devops`: build, deploy, CI/CD e ambientes.
+- `dados`: modelagem, armazenamento e fluxo de dados.
+- `documentacao`: README, guias e documentação técnica.
+
+Conteúdo e negócio
+- `conteudo`: textos, tom de voz e conteúdo do produto.
+- `seo-performance`: busca orgânica e desempenho de carregamento.
+- `produto`: escopo, priorização e requisitos do produto.
+- `marketing`: posicionamento, divulgação e aquisição de usuários.
+- `juridico-lgpd`: termos, privacidade e conformidade com a LGPD.
+- `suporte`: atendimento, FAQ e canais de ajuda ao usuário.
 
 ## Antes de delegar
 

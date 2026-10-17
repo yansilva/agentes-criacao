@@ -9,6 +9,8 @@ OPUS = {"orquestrador", "arquiteto"}
 ESPECIALISTAS = [
     "arquiteto", "designer", "seguranca", "qa", "devops", "dados", "conteudo",
     "acessibilidade", "seo-performance", "documentacao", "app-builder", "site-builder",
+    "frontend", "backend", "mobile", "revisao-codigo", "produto", "marketing",
+    "juridico-lgpd", "suporte",
 ]
 MODELOS = {n: ("opus" if n in OPUS else "sonnet") for n in ["orquestrador"] + ESPECIALISTAS}
 
