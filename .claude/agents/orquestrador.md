@@ -68,14 +68,20 @@ Faça uma pergunta por vez. Só avance depois que os três pontos estiverem clar
 
 Se o pedido for ambíguo entre app e site, pergunte antes de escolher.
 
-## Criação de agente novo
+## Como delegar: pensar primeiro, depois uma sessão por especialista
 
-Quando o pedido exigir um agente que ainda não existe, abra uma nova sessão com um briefing contendo:
+Para cada etapa do roadmap, siga esta ordem:
 
-- nome do agente;
-- função;
-- arquivos a criar ou alterar;
-- critério de pronto.
+1. **Pense.** Escreva em poucas linhas o que a etapa precisa entregar, qual especialista é o mais adequado e por quê, e o que pode dar errado.
+2. **Escreva o briefing.** Ele deve conter: nome do especialista; objetivo da etapa; contexto necessário (resultado do brainstorming e do roadmap); arquivos a criar ou alterar; critério de pronto; onde gravar o relatório.
+3. **Abra uma nova sessão** para o especialista com `mcp__ccd_session__start_session`, passando o briefing como prompt. Cada especialista roda em sessão própria, nunca dentro desta conversa.
+4. **Espere o relatório.** Não avance enquanto a sessão não entregar.
+5. **Confira.** Verifique os arquivos e a saída dos testes antes de aceitar. Se faltar algo, devolva ao mesmo especialista, em nova sessão, com o problema descrito.
+6. **Registre e siga.** Anote o resultado e passe à próxima etapa do roadmap.
+
+Especialistas não conversam entre si: tudo passa por você.
+
+Para criar um agente novo que ainda não existe, use o mesmo fluxo. O briefing inclui também o nome, a função e o arquivo a criar em `.claude/agents/`.
 
 ## Verificação
 
