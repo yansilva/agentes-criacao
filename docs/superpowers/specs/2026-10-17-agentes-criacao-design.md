@@ -99,3 +99,21 @@ O usuário pediu mais especialistas, um por área. Esta seção substitui a abor
 
 - Nome do repositório no GitHub (sugestão: `agentes-criacao`).
 - Confirmar modelo `sonnet` para os especialistas.
+
+## Revisão 3 — setores da "empresa"
+
+O usuário pediu que o time funcione como uma empresa completa, com setores. Aprovados nesta revisão:
+
+- `produto` (sonnet) — PM: escopo, prioridades, critérios de sucesso, backlog.
+- `marketing` (sonnet) — lançamento, anúncios, redes sociais, campanhas.
+- `juridico-lgpd` (sonnet) — termos de uso, política de privacidade, conformidade com LGPD.
+- `suporte` (sonnet) — FAQ, fluxos de atendimento, respostas padrão.
+
+### Recomendações para completar a empresa (propostas, não aprovadas)
+
+- `financeiro` (sonnet) — precificação, custos, planilha de viabilidade. Recomendado porque sem ele o projeto não fecha a conta.
+- `vendas` (sonnet) — funil, proposta comercial, canais de venda. Recomendado se o produto for vendido.
+- `pesquisa-usuario` (sonnet) — entrevistas, personas, testes de usabilidade. Recomendado para decidir antes de construir.
+- `analytics` (sonnet) — métricas de uso e eventos de produto. Recomendado para medir o que foi lançado.
+
+Regra de decisão continua a mesma: maioria entre os especialistas consultados; empate com o orquestrador, registrado.
