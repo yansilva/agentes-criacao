@@ -117,3 +117,18 @@ O usuário pediu que o time funcione como uma empresa completa, com setores. Apr
 - `analytics` (sonnet) — métricas de uso e eventos de produto. Recomendado para medir o que foi lançado.
 
 Regra de decisão continua a mesma: maioria entre os especialistas consultados; empate com o orquestrador, registrado.
+
+## Revisão 4 — área de programação e aprovação dos setores
+
+Aprovados pelo usuário nesta revisão:
+
+- Os quatro setores da revisão 3: `produto`, `marketing`, `juridico-lgpd`, `suporte` (todos sonnet).
+- Área de programação, todos sonnet:
+  - `frontend` — interfaces web e componentes (React, Vue, HTML/CSS).
+  - `backend` — APIs, regras de negócio, autenticação e integrações.
+  - `mobile` — apps nativos ou híbridos (React Native, Flutter, Swift, Kotlin).
+  - `revisao-codigo` — revisa qualidade, legibilidade e dívida técnica antes do merge.
+
+Os quatro recomendados da revisão 3 (`financeiro`, `vendas`, `pesquisa-usuario`, `analytics`) continuam **não aprovados**. Ficam de fora até o usuário decidir.
+
+Regra de decisão: maioria entre os especialistas consultados; empate com o orquestrador, registrado.

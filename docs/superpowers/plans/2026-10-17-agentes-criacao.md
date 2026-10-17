@@ -213,3 +213,23 @@ Each file: frontmatter com `name`, `description` (uma frase de quando usar), `mo
 ### Task 8: Publicação
 
 Mesma Task 5 do plano original, com a nova contagem de agentes. Bloqueada até `gh auth login` válido.
+
+---
+
+## Revisão 4 do plano — setores e programação
+
+Spec: revisão 4 do design. Aprovados: `produto`, `marketing`, `juridico-lgpd`, `suporte`, `frontend`, `backend`, `mobile`, `revisao-codigo` (todos sonnet). Os recomendados (`financeiro`, `vendas`, `pesquisa-usuario`, `analytics`) ficam fora.
+
+### Task 9: Lote de 8 especialistas (mesmo formato da Task 6)
+
+Create in `.claude/agents/`: `produto.md`, `marketing.md`, `juridico-lgpd.md`, `suporte.md`, `frontend.md`, `backend.md`, `mobile.md`, `revisao-codigo.md`. Each: frontmatter `name`, `description`, `model: sonnet`; short Portuguese body with papel, como trabalha, entrega, critério de pronto.
+
+### Task 10: Orquestrador e validador com 21 agentes
+
+- Modify `.claude/agents/orquestrador.md`: list all new specialists, one line each.
+- Modify `scripts/validar_agentes.py`: all new names sonnet; orquestrador must mention all of them.
+- Verify: `python3 -I scripts/validar_agentes.py` → `OK: 21 agentes válidos`, exit 0.
+
+### Task 11: Publicação
+
+Bloqueada até `gh auth login` válido. Mesma Task 5 do plano original.
