@@ -5,7 +5,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 AGENTS = ROOT / ".claude" / "agents"
-MODELOS = {"orquestrador": "opus", "app-builder": "sonnet", "site-builder": "sonnet"}
+OPUS = {"orquestrador", "arquiteto"}
+ESPECIALISTAS = [
+    "arquiteto", "designer", "seguranca", "qa", "devops", "dados", "conteudo",
+    "acessibilidade", "seo-performance", "documentacao", "app-builder", "site-builder",
+]
+MODELOS = {n: ("opus" if n in OPUS else "sonnet") for n in ["orquestrador"] + ESPECIALISTAS}
 
 
 def frontmatter(texto):
@@ -43,7 +48,7 @@ def main():
     orq = AGENTS / "orquestrador.md"
     if orq.exists():
         t = orq.read_text(encoding="utf-8")
-        for nome in ("app-builder", "site-builder"):
+        for nome in ESPECIALISTAS:
             if nome not in t:
                 erros.append(f"orquestrador.md não menciona {nome}")
     if erros:
