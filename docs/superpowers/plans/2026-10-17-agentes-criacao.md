@@ -177,3 +177,39 @@ Expected: URL do repositório impresso, branch `main` enviada.
 
 Run: `git ls-remote origin main`
 Expected: um hash para `refs/heads/main`.
+
+---
+
+## Revisão 2 do plano — time ampliado
+
+Spec: `docs/superpowers/specs/2026-10-17-agentes-criacao-design.md` (revisão 2, time aprovado pelo usuário).
+
+### Task 6: Lote de especialistas (mesmo formato)
+
+**Files (Create, em `.claude/agents/`):**
+- `arquiteto.md` — `name: arquiteto`, `model: opus`. Monta o roteiro técnico do projeto e recomenda quais especialistas acionar e em que ordem.
+- `designer.md` — `name: designer`, `model: sonnet`. Interface, fluxo de telas, identidade visual, acessibilidade básica.
+- `seguranca.md` — `name: seguranca`, `model: sonnet`. Autenticação, segredos, dependências, entradas do usuário.
+- `qa.md` — `name: qa`, `model: sonnet`. Testes, critérios de aceite, regressão.
+- `devops.md` — `name: devops`, `model: sonnet`. Build, hospedagem, pipeline, variáveis de ambiente.
+- `dados.md` — `name: dados`, `model: sonnet`. Modelagem de banco, APIs, migrações.
+- `conteudo.md` — `name: conteudo`, `model: sonnet`. Textos, títulos, chamadas, tom de voz.
+- `acessibilidade.md` — `name: acessibilidade`, `model: sonnet`. WCAG básico, contraste, teclado, leitor de tela.
+- `seo-performance.md` — `name: seo-performance`, `model: sonnet`. Metadados, velocidade, Core Web Vitals.
+- `documentacao.md` — `name: documentacao`, `model: sonnet`. README, guia de uso, registro de decisões.
+
+Each file: frontmatter com `name`, `description` (uma frase de quando usar), `model`; corpo em português, curto, com papel e critério de pronto.
+
+**Verify:** `python3 scripts/validar_agentes.py` (após Task 7 atualizar o script).
+
+### Task 7: Orquestrador e validação ampliados
+
+**Files:**
+- Modify: `.claude/agents/orquestrador.md` — lista de especialistas, fluxo do arquiteto, regra de maioria (decisão por maioria entre especialistas consultados, empate com o orquestrador, registrado).
+- Modify: `scripts/validar_agentes.py` — modelos esperados: `orquestrador` e `arquiteto` opus; os demais sonnet. Orquestrador deve citar todos os especialistas.
+
+**Verify:** `python3 -I scripts/validar_agentes.py` → `OK: 13 agentes válidos` (orquestrador, arquiteto, designer, seguranca, qa, devops, dados, conteudo, acessibilidade, seo-performance, documentacao, app-builder, site-builder).
+
+### Task 8: Publicação
+
+Mesma Task 5 do plano original, com a nova contagem de agentes. Bloqueada até `gh auth login` válido.

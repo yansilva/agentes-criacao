@@ -58,6 +58,43 @@ Frontmatter com `name`, `description` (quando usar), `model`, e `tools` quando n
 - Automatizar a criação de projetos de app/site em si (isso é trabalho dos agentes depois de criados).
 - Outros tipos de agente além de app e site, nesta primeira versão.
 
+## Revisão 2 — ampliação do time de especialistas (proposta, aguardando aprovação)
+
+O usuário pediu mais especialistas, um por área. Esta seção substitui a abordagem A apenas no que trata do time; o restante continua valendo.
+
+### Time proposto
+
+- `orquestrador` (opus) — coordena tudo, decide por maioria, fala com o usuário.
+- `arquiteto` (opus) — monta o roteiro técnico do projeto (estrutura, stack, etapas, scripts) e recomenda quais especialistas o orquestrador deve acionar e em que ordem.
+- `designer` (sonnet) — interface, fluxo de telas, identidade visual, acessibilidade básica.
+- `seguranca` (sonnet) — revisa autenticação, segredos, dependências, entradas do usuário.
+- `qa` (sonnet) — define e roda testes, critérios de aceite, checagem de regressão.
+- `app-builder` (sonnet) — implementa apps mobile/web.
+- `site-builder` (sonnet) — implementa sites e landing pages.
+- `devops` (sonnet) — build, hospedagem, pipeline de publicação, variáveis de ambiente.
+- `dados` (sonnet) — modelagem de banco, APIs, migrações, dados de exemplo.
+- `conteudo` (sonnet) — textos, títulos, chamadas, tom de voz.
+
+### Recomendações adicionais (propostas, não aprovadas)
+
+- `acessibilidade` (sonnet) — WCAG básico, contraste, teclado, leitor de tela. Recomendado porque apps e sites falham muito aqui e o designer sozinho não cobre.
+- `seo-performance` (sonnet) — metadados, velocidade, Core Web Vitals. Recomendado para sites públicos.
+- `documentacao` (sonnet) — README, guia de uso e registro de decisões. Recomendado para o projeto ser usado em outros dispositivos.
+
+### Fluxo com o time
+
+1. Orquestrador recebe o pedido e aplica brainstorming (objetivo, público, critério de sucesso).
+2. Orquestrador pede ao `arquiteto` o roteiro e a lista de especialistas recomendados.
+3. Orquestrador aciona os especialistas recomendados. Cada um dá sua opinião ou entrega.
+4. Quando há divergência, o orquestrador decide por maioria entre os especialistas consultados. Em empate, decide ele mesmo e registra o motivo.
+5. Cada especialista que cria algo é aberto em nova sessão, conforme a regra original.
+
+### Decisões a confirmar
+
+- Regra de maioria: maioria simples entre os especialistas consultados; empate fica com o orquestrador.
+- Modelo do arquiteto: opus (sugerido), pelo peso das decisões.
+- Nomes dos arquivos: `arquiteto.md`, `designer.md`, `seguranca.md`, `qa.md`.
+
 ## Questões em aberto
 
 - Nome do repositório no GitHub (sugestão: `agentes-criacao`).
