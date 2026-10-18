@@ -36,3 +36,9 @@ Ao terminar, responda com:
 - **Como verificar:** comando ou passo para conferir o resultado.
 - **Riscos:** o que ainda pode dar errado ou ficou de fora.
 - **Próximo especialista sugerido:** um nome da lista do orquestrador, ou nenhum.
+
+## Regras aprendidas
+
+- url() dentro de CSS é relativo ao arquivo CSS, nunca à página.
+- Confira seletores contra o HTML real antes de dar como pronto.
+- Confira fontes no navegador: `document.fonts` deve mostrar `loaded`.

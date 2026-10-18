@@ -33,3 +33,8 @@ Ao terminar, responda com:
 - **Como verificar:** comando ou passo para conferir o resultado.
 - **Riscos:** o que ainda pode dar errado ou ficou de fora.
 - **Próximo especialista sugerido:** um nome da lista do orquestrador, ou nenhum.
+
+## Regras aprendidas
+
+- Antes de reportar pendência, confirme no estado atual do repositório.
+- Separe divergência do roteiro de falta real de arquivo.

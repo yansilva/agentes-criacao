@@ -33,3 +33,8 @@ Ao terminar, responda com:
 - **Como verificar:** comando ou passo para conferir o resultado.
 - **Riscos:** o que ainda pode dar errado ou ficou de fora.
 - **Próximo especialista sugerido:** um nome da lista do orquestrador, ou nenhum.
+
+## Regras aprendidas
+
+- Marque como PENDENTE qualquer texto que dependa de confirmação.
+- Só use fatos que estejam em fonte verificável.

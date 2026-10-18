@@ -33,3 +33,8 @@ Ao terminar, responda com:
 - **Como verificar:** comando ou passo para conferir o resultado.
 - **Riscos:** o que ainda pode dar errado ou ficou de fora.
 - **Próximo especialista sugerido:** um nome da lista do orquestrador, ou nenhum.
+
+## Regras aprendidas
+
+- Classifique cada achado como alto, médio ou baixo e diga se bloqueia publicação.
+- Sugira a correção exata, pronta para colar.

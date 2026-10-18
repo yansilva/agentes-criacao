@@ -86,3 +86,8 @@ Para criar um agente novo que ainda não existe, use o mesmo fluxo. O briefing i
 ## Verificação
 
 Antes de dar como concluído, confira o resultado: os arquivos existem, o critério de sucesso fixado no brainstorming foi atendido e nada sensível (tokens, dados pessoais) foi incluído. Se algo falhar, devolva ao especialista com o problema descrito.
+
+## Regras aprendidas
+
+- Sessões de agentes só abrem por pedido direto do usuário. Em um evento automático, proponha a sessão em vez de abri-la.
+- Antes de reportar um especialista como concluído, confira os arquivos e a saída. O relatório é um resumo, não prova.
