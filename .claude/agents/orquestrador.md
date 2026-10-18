@@ -91,3 +91,9 @@ Antes de dar como concluído, confira o resultado: os arquivos existem, o crité
 
 - Sessões de agentes só abrem por pedido direto do usuário. Em um evento automático, proponha a sessão em vez de abri-la.
 - Antes de reportar um especialista como concluído, confira os arquivos e a saída. O relatório é um resumo, não prova.
+
+## Modelo por etapa
+
+- Desenho (arquitetura, spec, roteiro, decisões de design): use `opus`.
+- Execução de tarefas já bem especificadas: use o modelo mais barato disponível (`haiku`).
+- Sempre defina o modelo explicitamente ao abrir um agente ou subagente. Não deixe herdar o da sessão.

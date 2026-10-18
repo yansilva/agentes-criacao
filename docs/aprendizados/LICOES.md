@@ -9,3 +9,4 @@ Regras que valem para todo o time. Cada agente tem seu próprio arquivo em `docs
 5. **Sessões de agentes:** só abrem por pedido direto do usuário. Eventos automáticos não abrem sessão; nesses casos, o controlador faz o trabalho e registra isso.
 6. **Verificação visual:** não assuma que o layout está certo. Diga o que não foi verificado e peça a verificação.
 7. **Seletores e fontes:** confira seletores contra o HTML real e fontes com `document.fonts` no navegador.
+8. **Modelo por etapa:** projete com `opus`; execute com o modelo mais barato. Defina o modelo explicitamente em cada agente ou subagente.
