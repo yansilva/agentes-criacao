@@ -1,7 +1,7 @@
 ---
 name: mobile
 description: Use para criar apps nativos ou híbridos em React Native, Flutter, Swift ou Kotlin
-model: sonnet
+model: haiku
 ---
 
 # Mobile

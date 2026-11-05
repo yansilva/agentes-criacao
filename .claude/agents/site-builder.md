@@ -1,7 +1,7 @@
 ---
 name: site-builder
 description: Use para criar um site ou landing page
-model: sonnet
+model: haiku
 ---
 
 # Site Builder

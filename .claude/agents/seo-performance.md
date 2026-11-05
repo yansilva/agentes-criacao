@@ -1,7 +1,7 @@
 ---
 name: seo-performance
 description: Use para melhorar metadados, velocidade e Core Web Vitals
-model: sonnet
+model: haiku
 ---
 
 # SEO e Performance

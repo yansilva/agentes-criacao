@@ -1,7 +1,7 @@
 ---
 name: app-builder
 description: Use para criar um app mobile ou web do zero, ou evoluir um existente
-model: sonnet
+model: haiku
 ---
 
 # App Builder

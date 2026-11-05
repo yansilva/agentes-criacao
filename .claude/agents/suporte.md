@@ -1,7 +1,7 @@
 ---
 name: suporte
 description: Use para criar FAQ, fluxos de atendimento e respostas padrão
-model: sonnet
+model: haiku
 ---
 
 # Suporte

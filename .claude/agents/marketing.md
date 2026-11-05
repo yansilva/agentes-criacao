@@ -1,7 +1,7 @@
 ---
 name: marketing
 description: Use para planejar lançamento, anúncios, redes sociais e campanhas
-model: sonnet
+model: opus
 ---
 
 # Marketing

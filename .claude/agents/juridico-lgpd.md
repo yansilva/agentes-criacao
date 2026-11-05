@@ -1,7 +1,7 @@
 ---
 name: juridico-lgpd
 description: Use para rascunhar termos de uso, política de privacidade e checar conformidade com a LGPD
-model: sonnet
+model: opus
 ---
 
 # Jurídico e LGPD

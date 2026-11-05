@@ -1,7 +1,7 @@
 ---
 name: acessibilidade
 description: Use para revisar WCAG básico, contraste, teclado e leitor de tela
-model: sonnet
+model: haiku
 ---
 
 # Acessibilidade

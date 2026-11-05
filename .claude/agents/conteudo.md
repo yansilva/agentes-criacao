@@ -1,7 +1,7 @@
 ---
 name: conteudo
 description: Use para escrever textos, títulos, chamadas e definir o tom de voz
-model: sonnet
+model: haiku
 ---
 
 # Conteúdo
