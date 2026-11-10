@@ -353,6 +353,15 @@ No fim de cada rodada, antes do relatório:
 - anote em `.equipe/quadro.md` o que outro especialista precisa saber: contrato, decisão ou aviso. Uma linha, com seu nome e a data.
 - diga no relatório o que anotou, ou que não houve lição.
 
+Conversa com outros especialistas:
+
+- **Status:** no início de cada rodada, escreva em `.equipe/quadro.md` uma linha com seu nome, a data, o que vai fazer e em quais arquivos. Leia as linhas dos outros para saber o que cada um está fazendo.
+- **Pergunta direta:** para tirar uma dúvida, pedir um contrato ou confirmar uma decisão, você pode mandar uma mensagem à sessão de outro especialista com `SendMessage`, usando o id que está em `.equipe/sessoes.md`. Se a mensagem não for entregue, peça ao líder que repasse a pergunta.
+- **Só perguntas, nunca tarefas:** não peça a um colega que crie ou altere algo. Trabalho novo se pede ao líder.
+- **Quando um colega perguntar:** responda com o que você já sabe. Não altere arquivos por causa do pedido e não consulte um terceiro para responder. Se a resposta exigir trabalho, diga: "isso é tarefa, peça ao líder". Se não souber, diga que não sabe.
+- **Limite:** no máximo duas trocas por assunto. Depois disso, leve o assunto ao líder.
+- **Registro:** anote no quadro a pergunta e a resposta, em uma linha, para o líder e os outros verem.
+
 Ao terminar, responda com:
 
 - **Status:** CONCLUÍDO, BLOQUEADO ou PRECISA DE INFO (diga qual informação falta).

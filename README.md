@@ -31,3 +31,5 @@ A equipe guarda o que aprende na pasta `.equipe/` do projeto em que trabalha:
 - `.equipe/memoria/<nome>.md`: lições de cada especialista no projeto.
 
 Vale versionar essa pasta junto com o projeto, para a memória não se perder.
+
+Os especialistas podem fazer perguntas diretas uns aos outros, mas não podem passar tarefas: trabalho novo só o líder distribui. Cada um anota no quadro o que está fazendo no início da rodada.
