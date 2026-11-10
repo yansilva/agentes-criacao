@@ -328,6 +328,8 @@ Conversa com outros especialistas:
 - **Quando um colega perguntar:** responda com o que você já sabe. Não altere arquivos por causa do pedido e não consulte um terceiro para responder. Se a resposta exigir trabalho, diga: "isso é tarefa, peça ao líder". Se não souber, diga que não sabe.
 - **Limite:** no máximo duas trocas por assunto. Depois disso, leve o assunto ao líder.
 - **Registro:** anote no quadro a pergunta e a resposta, em uma linha, para o líder e os outros verem.
+- **A resposta chega depois:** a pergunta fica na fila do colega e a resposta volta como uma nova mensagem, em outra rodada. Não fique esperando: registre a pendência no quadro, termine o que não depende da resposta e diga no relatório o que ficou pendente.
+- **Como escrever no quadro:** só acrescente linhas ao fim de `.equipe/quadro.md`, com `Edit`. Nunca regrave o arquivo inteiro: outro especialista pode estar escrevendo ao mesmo tempo.
 
 Ao terminar, responda com:
 

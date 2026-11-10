@@ -12,3 +12,6 @@ Regras que valem para todo o time. Cada agente tem seu próprio arquivo em `docs
 8. **Modelo por etapa:** projete com `opus`; execute com o modelo mais barato. Defina o modelo explicitamente em cada agente ou subagente.
 9. **Uma sessão por especialista:** cada especialista tem uma única sessão por projeto. Tarefas novas e correções vão para ela com `SendMessage`. Não abra outra sessão para o mesmo especialista. As lições do projeto ficam em `.equipe/memoria/` e os avisos entre especialistas em `.equipe/quadro.md`.
 10. **Conversa entre especialistas:** pergunta direta é permitida; tarefa só o líder passa. Quem recebe responde com o que já sabe, sem alterar arquivos e sem consultar um terceiro. No máximo duas trocas por assunto, e tudo vai para o quadro.
+11. **Montagem da equipe:** ao instalar os agentes num projeto, abra de uma vez uma sessão por especialista, com o título `<especialista> — <projeto>`, e registre em `.equipe/sessoes.md`. Depois o líder só localiza a sessão.
+12. **Quadro compartilhado:** só acrescente linhas ao `.equipe/quadro.md`, com `Edit`. Regravar o arquivo inteiro apaga o que outro especialista escreveu ao mesmo tempo. O líder cria o quadro na montagem.
+13. **Pergunta direta é assíncrona:** a resposta do colega chega em outra rodada. Registre a pendência, termine o resto e relate o que ficou pendente.

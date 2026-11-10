@@ -20,6 +20,19 @@ cp -r .claude/agents/* ~/.claude/agents/
 cp -r .claude/agents/* /caminho/do/projeto/.claude/agents/
 ```
 
+## Montar a equipe
+
+Depois de copiar os agentes para um projeto, abra uma sessão para cada especialista antes de começar o trabalho. Quem faz isso é a sessão principal, a mesma que copiou os agentes:
+
+1. Liste os arquivos de `.claude/agents/`. Cada um é um especialista, menos `coordenador` e `orquestrador`, que são líderes.
+2. Abra uma sessão por especialista, com o título `<especialista> — <projeto>` e o modelo do campo `model` do arquivo. O prompt manda a sessão ler o próprio arquivo de agente, responder "pronto" e aguardar.
+3. Crie `.equipe/quadro.md` e a pasta `.equipe/memoria/`.
+4. Registre nome, id e data de cada sessão em `.equipe/sessoes.md`.
+
+As sessões devem abrir no mesmo checkout do projeto, sem worktree própria, para todas enxergarem a mesma pasta `.equipe/`.
+
+A partir daí o líder só localiza a sessão do especialista e envia a tarefa. Para abrir só parte do time, diga quais especialistas quer.
+
 ## Nota
 
 Cada especialista trabalha em uma sessão própria e permanente: uma por especialista em cada projeto. O líder (coordenador ou orquestrador) envia as tarefas seguintes e as correções para essa mesma sessão, em vez de abrir outra.

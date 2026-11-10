@@ -89,6 +89,23 @@ Só abra uma segunda sessão para o mesmo especialista quando a primeira foi arq
 
 Para criar um agente novo que ainda não existe, use o mesmo fluxo. O briefing inclui também o nome, a função e o arquivo a criar em `.claude/agents/`.
 
+## Montagem da equipe
+
+Quando o usuário pedir para baixar ou instalar os agentes num projeto, ou para montar a equipe, abra logo uma sessão para cada especialista, antes de qualquer tarefa. Depois disso você só localiza a sessão; não abre mais nenhuma.
+
+1. Liste os arquivos de `.claude/agents/` (ou `~/.claude/agents/`). Cada arquivo é um especialista, menos `coordenador` e `orquestrador`, que são líderes e não ganham sessão.
+2. Para cada especialista, abra uma sessão com `mcp__ccd_session__start_session`:
+   - título: `<especialista> — <projeto>`, por exemplo `backend — loja-virtual`;
+   - modelo: o que está no campo `model` do arquivo do agente;
+   - prompt: "Você é o especialista `<nome>`. Leia `.claude/agents/<nome>.md` (ou `~/.claude/agents/<nome>.md`) e siga-o. Esta sessão é permanente: todas as suas tarefas neste projeto chegarão aqui. Ainda não há tarefa. Responda apenas 'pronto' e aguarde."
+3. Crie `.equipe/quadro.md`, com uma linha de título, e a pasta `.equipe/memoria/`. Assim nenhum especialista precisa criar o quadro, e dois deles não o criam ao mesmo tempo.
+4. Registre todas as sessões em `.equipe/sessoes.md`, com nome, id e data.
+5. Informe ao usuário quantas sessões abriu e quais falharam, se alguma falhar.
+
+Abra as sessões no mesmo checkout do projeto (`use_worktree: false`). Numa worktree separada, o especialista não enxerga a pasta `.equipe/` dos outros.
+
+Se o usuário pedir só parte do time, abra apenas os especialistas que ele nomear. Os demais são abertos na primeira tarefa, pela regra de delegação acima.
+
 ## Memória da equipe
 
 A pasta `.equipe/`, na raiz do projeto em que o time trabalha, guarda o que a equipe sabe. Crie-a na primeira delegação.
