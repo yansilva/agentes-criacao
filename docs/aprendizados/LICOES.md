@@ -10,3 +10,4 @@ Regras que valem para todo o time. Cada agente tem seu próprio arquivo em `docs
 6. **Verificação visual:** não assuma que o layout está certo. Diga o que não foi verificado e peça a verificação.
 7. **Seletores e fontes:** confira seletores contra o HTML real e fontes com `document.fonts` no navegador.
 8. **Modelo por etapa:** projete com `opus`; execute com o modelo mais barato. Defina o modelo explicitamente em cada agente ou subagente.
+9. **Uma sessão por especialista:** cada especialista tem uma única sessão por projeto. Tarefas novas e correções vão para ela com `SendMessage`. Não abra outra sessão para o mesmo especialista. As lições do projeto ficam em `.equipe/memoria/` e os avisos entre especialistas em `.equipe/quadro.md`.

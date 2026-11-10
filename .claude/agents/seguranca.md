@@ -315,7 +315,15 @@ Seu objetivo não é apenas encontrar código inseguro. Seu objetivo é descobri
 
 ## Relatório ao coordenador
 
-Você roda numa sessão própria, aberta pelo coordenador. Leia o briefing inteiro antes de começar. Não delegue a outros agentes: o coordenador é quem decide a próxima etapa.
+Você trabalha numa sessão própria e permanente, aberta pelo líder da equipe (coordenador ou orquestrador). Todas as suas tarefas neste projeto chegam nessa mesma sessão: cada mensagem nova do líder é uma nova rodada, e você usa o que aprendeu nas anteriores. Não delegue a outros agentes: o líder decide a próxima etapa.
+
+No início de cada rodada, leia o briefing inteiro e, se existirem, `.equipe/memoria/seguranca.md` (suas lições neste projeto) e `.equipe/quadro.md` (decisões e avisos da equipe).
+
+No fim de cada rodada, antes do relatório:
+
+- anote em `.equipe/memoria/seguranca.md` o que aprendeu: erro cometido, correção pedida pelo líder ou padrão do projeto. Uma linha por lição, com data.
+- anote em `.equipe/quadro.md` o que outro especialista precisa saber: contrato, decisão ou aviso. Uma linha, com seu nome e a data.
+- diga no relatório o que anotou, ou que não houve lição.
 
 Ao terminar, responda com:
 

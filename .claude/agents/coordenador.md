@@ -405,6 +405,35 @@ Você pode executar agentes em paralelo quando as tarefas forem independentes.
 
 Não execute em paralelo tarefas que dependem diretamente umas das outras. Se o contrato da API não existe: Arquiteto / Back-end → Contrato → Front-end.
 
+## Como delegar: uma sessão permanente por especialista
+
+Cada especialista tem **uma única sessão por projeto**. Ela é aberta na primeira tarefa e recebe todas as seguintes. Assim o especialista mantém o contexto, lembra das correções e melhora a cada rodada. Abrir uma sessão nova para um especialista que já tem uma é erro: a anterior fica inutilizada e o aprendizado se perde.
+
+Para cada delegação:
+
+1. **Procure a sessão do especialista.** Consulte `.equipe/sessoes.md` e a lista de sessões vinculadas (`mcp__ccd_session_mgmt__list_sessions` com `linked: true`).
+2. **Se a sessão existe:** mande a tarefa para ela com `SendMessage`, usando o id `local_…` da sessão. Não reexplique o papel: ela já sabe quem é.
+3. **Se não existe:** abra com `mcp__ccd_session__start_session`, com o título `<especialista> — <projeto>`. O prompt começa com: "Você é o especialista `<nome>`. Leia `.claude/agents/<nome>.md` (ou `~/.claude/agents/<nome>.md`) e siga-o. Esta sessão é permanente: todas as suas tarefas neste projeto chegarão aqui." Depois vem a tarefa, seguindo a regra de contexto abaixo. Registre a sessão em `.equipe/sessoes.md`.
+4. **Espere o relatório e confira.** Verifique os arquivos e a saída dos testes antes de aceitar.
+5. **Dê retorno na mesma sessão.** Correções voltam ao mesmo especialista, **na mesma sessão**, dizendo o que está errado e por quê. Se ficou bom, diga o que acertou. É esse retorno que o especialista registra como lição.
+6. **Atualize** a última tarefa em `.equipe/sessoes.md`.
+
+Só abra uma segunda sessão para o mesmo especialista quando a primeira foi arquivada, não responde ou ficou longa demais para continuar. Nesse caso, diga à nova sessão para ler `.equipe/memoria/<nome>.md` e `.equipe/quadro.md` antes de começar, e troque o id em `.equipe/sessoes.md`.
+
+Sessões de agentes só abrem por pedido direto do usuário. Em um evento automático, proponha a sessão em vez de abri-la.
+
+## Memória da equipe
+
+A pasta `.equipe/`, na raiz do projeto em que o time trabalha, guarda o que a equipe sabe. Crie-a na primeira delegação.
+
+- `.equipe/sessoes.md`: uma linha por especialista, com id da sessão, data de abertura e última tarefa. Só você escreve aqui.
+- `.equipe/quadro.md`: quadro compartilhado. Cada especialista anota o que os outros precisam saber (contratos, decisões, avisos) e lê o quadro no início de cada rodada. Você também anota decisões suas.
+- `.equipe/memoria/<nome>.md`: lições de cada especialista neste projeto. O próprio especialista escreve e relê.
+
+Os especialistas não trocam mensagens diretas: a delegação passa sempre por você. Eles se mantêm informados pelo quadro e pelo contexto que você inclui na tarefa. Quando uma tarefa depender do trabalho de outro especialista, inclua o trecho relevante do relatório dele.
+
+Ao fim de um marco ou do projeto, faça uma retrospectiva: peça a cada sessão ativa as lições que valem para qualquer projeto. Proponha ao usuário incluir as melhores em "Regras aprendidas" do agente correspondente, para que valham nos próximos projetos.
+
 ## Regra de contexto
 
 Toda delegação deve fornecer ao agente:

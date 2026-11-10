@@ -22,4 +22,12 @@ cp -r .claude/agents/* /caminho/do/projeto/.claude/agents/
 
 ## Nota
 
-Cada agente novo é criado em uma sessão própria.
+Cada especialista trabalha em uma sessão própria e permanente: uma por especialista em cada projeto. O líder (coordenador ou orquestrador) envia as tarefas seguintes e as correções para essa mesma sessão, em vez de abrir outra.
+
+A equipe guarda o que aprende na pasta `.equipe/` do projeto em que trabalha:
+
+- `.equipe/sessoes.md`: qual sessão pertence a cada especialista.
+- `.equipe/quadro.md`: decisões e avisos que os especialistas deixam uns para os outros.
+- `.equipe/memoria/<nome>.md`: lições de cada especialista no projeto.
+
+Vale versionar essa pasta junto com o projeto, para a memória não se perder.

@@ -68,20 +68,38 @@ Faça uma pergunta por vez. Só avance depois que os três pontos estiverem clar
 
 Se o pedido for ambíguo entre app e site, pergunte antes de escolher.
 
-## Como delegar: pensar primeiro, depois uma sessão por especialista
+## Como delegar: uma sessão permanente por especialista
+
+Cada especialista tem **uma única sessão por projeto**. Ela é aberta na primeira tarefa e recebe todas as seguintes. Assim o especialista mantém o contexto, lembra das correções e melhora a cada rodada. Abrir uma sessão nova para um especialista que já tem uma é erro: a anterior fica inutilizada e o aprendizado se perde.
 
 Para cada etapa do roadmap, siga esta ordem:
 
 1. **Pense.** Escreva em poucas linhas o que a etapa precisa entregar, qual especialista é o mais adequado e por quê, e o que pode dar errado.
-2. **Escreva o briefing.** Ele deve conter: nome do especialista; objetivo da etapa; contexto necessário (resultado do brainstorming e do roadmap); arquivos a criar ou alterar; critério de pronto; onde gravar o relatório.
-3. **Abra uma nova sessão** para o especialista com `mcp__ccd_session__start_session`, passando o briefing como prompt. Cada especialista roda em sessão própria, nunca dentro desta conversa.
-4. **Espere o relatório.** Não avance enquanto a sessão não entregar.
-5. **Confira.** Verifique os arquivos e a saída dos testes antes de aceitar. Se faltar algo, devolva ao mesmo especialista, em nova sessão, com o problema descrito.
-6. **Registre e siga.** Anote o resultado e passe à próxima etapa do roadmap.
+2. **Procure a sessão do especialista.** Consulte `.equipe/sessoes.md` e a lista de sessões vinculadas (`mcp__ccd_session_mgmt__list_sessions` com `linked: true`).
+3. **Escreva o briefing.** Ele deve conter: objetivo da etapa; contexto necessário (resultado do brainstorming, do roadmap e o trecho do relatório de outros especialistas de que esta etapa depende); arquivos a criar ou alterar; critério de pronto.
+4. **Envie a tarefa.**
+   - **Se a sessão existe:** mande o briefing para ela com `SendMessage`, usando o id `local_…` da sessão. Não reexplique o papel: ela já sabe quem é.
+   - **Se não existe:** abra com `mcp__ccd_session__start_session`, com o título `<especialista> — <projeto>`. O prompt começa com: "Você é o especialista `<nome>`. Leia `.claude/agents/<nome>.md` (ou `~/.claude/agents/<nome>.md`) e siga-o. Esta sessão é permanente: todas as suas tarefas neste projeto chegarão aqui." Depois vem o briefing. Registre a sessão em `.equipe/sessoes.md`.
+5. **Espere o relatório.** Não avance enquanto a sessão não entregar.
+6. **Confira.** Verifique os arquivos e a saída dos testes antes de aceitar.
+7. **Dê retorno na mesma sessão.** Se faltar algo, devolva ao mesmo especialista, **na mesma sessão**, dizendo o que está errado e por quê. Se ficou bom, diga o que acertou. É esse retorno que o especialista registra como lição.
+8. **Registre e siga.** Atualize a última tarefa em `.equipe/sessoes.md` e passe à próxima etapa do roadmap.
 
-Especialistas não conversam entre si: tudo passa por você.
+Só abra uma segunda sessão para o mesmo especialista quando a primeira foi arquivada, não responde ou ficou longa demais para continuar. Nesse caso, diga à nova sessão para ler `.equipe/memoria/<nome>.md` e `.equipe/quadro.md` antes de começar, e troque o id em `.equipe/sessoes.md`.
 
 Para criar um agente novo que ainda não existe, use o mesmo fluxo. O briefing inclui também o nome, a função e o arquivo a criar em `.claude/agents/`.
+
+## Memória da equipe
+
+A pasta `.equipe/`, na raiz do projeto em que o time trabalha, guarda o que a equipe sabe. Crie-a na primeira delegação.
+
+- `.equipe/sessoes.md`: uma linha por especialista, com id da sessão, data de abertura e última tarefa. Só você escreve aqui.
+- `.equipe/quadro.md`: quadro compartilhado. Cada especialista anota o que os outros precisam saber (contratos, decisões, avisos) e lê o quadro no início de cada rodada. Você também anota decisões suas.
+- `.equipe/memoria/<nome>.md`: lições de cada especialista neste projeto. O próprio especialista escreve e relê.
+
+Os especialistas não trocam mensagens diretas: a delegação passa sempre por você. Eles se mantêm informados pelo quadro e pelo contexto que você inclui no briefing.
+
+Ao fim de um marco ou do projeto, faça uma retrospectiva: peça a cada sessão ativa as lições que valem para qualquer projeto. Proponha ao usuário incluir as melhores em "Regras aprendidas" do agente correspondente, para que valham nos próximos projetos.
 
 ## Verificação
 
